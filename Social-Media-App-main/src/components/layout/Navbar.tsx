@@ -92,7 +92,7 @@ const Navbar = () => {
           href="/"
           className="whitespace-nowrap text-xl font-bold text-purple-600 transition hover:text-purple-700"
         >
-          MJSOCIAL
+          lumaSOCIAL
         </Link>
       </div>
 
