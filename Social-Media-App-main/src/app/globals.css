@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+.scrollbar-hide::-webkit-scrollbar{
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+@keyframes auth-slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes auth-slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.auth-slide-left {
+  animation: auth-slide-left 350ms ease-out;
+}
+
+.auth-slide-right {
+  animation: auth-slide-right 350ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-slide-left,
+  .auth-slide-right {
+    animation: none;
+  }
+}
+
+/* Global Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a855f7;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9333ea;
+}
+
+
+.custom-password-input::-ms-reveal,
+.custom-password-input::-ms-clear {
+  display: none;
+}
+
+:root {
+  --background: #fffafd;
+  --surface: #ffffff;
+  --pink: #f8dce9;
+  --pink-hover: #f2c6dc;
+  --purple: #a78bca;
+  --purple-hover: #8f70b8;
+  --text: #3d3045;
+  --muted: #8b7b91;
+  --border: #f0e4ef;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+::selection {
+  background-color: var(--pink);
+  color: var(--text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 3px;
+}
